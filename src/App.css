@@ -1,38 +1,41 @@
-.App {
-  text-align: center;
+body{
+  background-image: url(./images/dog-prints2.jpg);
+  background-position:center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 100vh;
+  width:100vw;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.App{
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap:20px;
 }
 
-.App-link {
-  color: #61dafb;
+button{
+  height: 75px;
+  width:150px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.glowing-button {
+  animation: glowing 1s infinite;
+}
+
+@keyframes glowing {
+  0% {
+    box-shadow: 0 0 5px rgb(170, 74, 234);
   }
-  to {
-    transform: rotate(360deg);
+  50% {
+    box-shadow: 0 0 20px rgb(170, 74, 234);
+  }
+  100% {
+    box-shadow: 0 0 5px rgb(170, 74, 234);
   }
 }
